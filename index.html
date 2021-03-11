@@ -2,6 +2,7 @@
   <head>
     <title></title>
     <meta content="">
+	  <meta content='width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=1' name='viewport'/>
     <style type='text/css'>
 	/* FIX */
 	.hidden{visibility:hidden;height:0;overflow:hidden;display:none}
@@ -73,13 +74,30 @@
         order: 1
     }
   }
+	    
+	    /* LAYOUT WIDGET */
+body#layout {width:100%}
+body#layout ul {display: none;}
+body#layout .layouthide {display:none}
+	    
+	    body#layout:before{content:"NihLink v2.6.5";position:absolute;top:33px;right:7px;z-index:1;padding:10px 20px;font-size:18px;font-family:sans-serif;color:#fff;background: #007bff}
+body#layout {background-color: #fff; border: 0}
+body#layout div.section {background-color: #fff}
+body#layout .add_widget a {color: #007bff}
+body#layout .row:after {content:'';clear:both;display:block}
+body#layout .isHideLayout {display:none;}
+body#layout .col-md-3 {float:left;width:30%;}
+body#layout .col-md-6 {float:left;width:40%;}
+body#layout #page-setting {background: #fffcf2}
+	    
+	    
 </style>
 
-<link crossorigin='anonymous' href='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'/>
-<link href='//use.fontawesome.com/releases/v5.0.10/css/all.css' rel='stylesheet' type='text/css'/>
-<script src='//code.jquery.com/jquery-2.1.4.min.js' type='text/javascript'/>
-<script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js'/>
-<script src='//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js'/>
+<link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'/>
+<link href='https://use.fontawesome.com/releases/v5.0.10/css/all.css' rel='stylesheet' type='text/css'/>
+<script src='https://code.jquery.com/jquery-2.1.4.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js'/>
+<script src='https:https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js'/>
 <script type='text/javascript'>
 &quot;use strict&quot;;
 $(document).ready(function() {
