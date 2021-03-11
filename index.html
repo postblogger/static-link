@@ -1,9 +1,103 @@
-<html>
-  <head>
-    <title></title>
-    <meta content="">
-	  <meta content='width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=1' name='viewport'/>
-    <style type='text/css'>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>&lt;!--/**
+*
+* Created By postkomik
+* safelink blogger 1.6.5
+* Author : postkomik
+* Date	 : 4 maret 2021
+* URL 	 : postkomik.github.io
+* Repository : https://github.com/postblogger/safelink
+* 
+*
+*/<head>--&gt;<b:include name='body'/>&lt;head&gt;
+
+<meta content='width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=1' name='viewport'/>
+<b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+  <title>Page Not Found - <data:blog.title/></title>
+<b:else/>
+  <title><data:view.title.escaped/></title>
+</b:if>
+<b:include data='blog' name='all-head-content'/>
+
+<link crossorigin='anonymous' href='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'/>
+<link href='//use.fontawesome.com/releases/v5.0.10/css/all.css' rel='stylesheet' type='text/css'/>
+<script src='//code.jquery.com/jquery-2.1.4.min.js' type='text/javascript'/>
+<script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js'/>
+<script src='//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js'/>
+
+<script type='text/javascript'>
+&quot;use strict&quot;;
+$(document).ready(function() {
+  (function(W,D){
+    W.asli_config = {
+      url: &#39;&#39;,
+      page: &#39;p/lanjut.html&#39;,
+      output: &#39;#output&#39;,
+      defaultkey: &#39;AnasRAR&#39;,
+      fixednavbar: false,
+      countdown: true,
+      timedown: 10,
+      lang: {
+        urlempty: &quot;URL can not empty&quot;,
+        convertsuccess: &quot;Convert URL success, copy url on box below&quot;,
+        validtext: &quot;HTTP, HTTPS, or WWW&quot;,
+        gourltext: &quot;coba di klik linknya pak&quot;,
+        nourl: &quot;nggapain pak ??, linknya nggak ada&quot;,
+        errorconvert: &quot;URL can not to convert&quot;,
+        emptypass: &quot;Password can not empty&quot;,
+        wrongpass: &quot;Password is incorrect&quot;,
+        countdowntext: &quot;Please Wait {{anascountdown}} Second&quot;
+      }
+    }
+    var xv = $(&#39;footer &gt; .d-table &gt; .d-table-row &gt; .d-table-cell &gt; .container &gt; .row &gt; .col-sm-7 &gt; a#naas&#39;);
+    if(xv.length){
+      W.validurlit = function (ur) {
+        return /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&amp;=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&amp;=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&amp;;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/.test(ur);
+      }
+      W.sUp = function(el) {
+        D.querySelector(el).parentNode.style.height = &#39;0&#39;;
+      }
+      W._GET = function(name, url) {
+        if (!url) url = location.href;
+        name = name.replace(/[\[]/,&quot;\\\[&quot;).replace(/[\]]/,&quot;\\\]&quot;);
+        var regexS = &quot;[\\?&amp;]&quot;+name+&quot;=([^&amp;#]*)&quot;;
+        var regex = new RegExp( regexS );
+        var results = regex.exec( url );
+        return results == null ? null : results[1];
+      }
+      xv.attr(&#39;href&#39;, &#39;//postkomik.github.io&#39;).text(&#39;postkomik&#39;);
+    } else {
+      location.href = &#39;//postkomik.github.io&#39;;
+    }
+  }(window,document));
+});
+</script>
+
+<b:skin version='1.0.0'><![CDATA[
+
+
+/* LAYOUT WIDGET */
+body#layout {width:100%}
+body#layout ul {display: none;}
+body#layout .layouthide {display:none}
+
+
+]]></b:skin>
+
+<b:template-skin><![CDATA[
+body#layout:before{content:"NihLink v2.6.5";position:absolute;top:33px;right:7px;z-index:1;padding:10px 20px;font-size:18px;font-family:sans-serif;color:#fff;background: #007bff}
+body#layout {background-color: #fff; border: 0}
+body#layout div.section {background-color: #fff}
+body#layout .add_widget a {color: #007bff}
+body#layout .row:after {content:'';clear:both;display:block}
+body#layout .isHideLayout {display:none;}
+body#layout .col-md-3 {float:left;width:30%;}
+body#layout .col-md-6 {float:left;width:40%;}
+body#layout #page-setting {background: #fffcf2}
+]]></b:template-skin>
+
+<style type='text/css'>
 	/* FIX */
 	.hidden{visibility:hidden;height:0;overflow:hidden;display:none}
 	.clear, .clearfix{clear:both}
@@ -74,151 +168,64 @@
         order: 1
     }
   }
-	    
-	    /* LAYOUT WIDGET */
-body#layout {width:100%}
-body#layout ul {display: none;}
-body#layout .layouthide {display:none}
-	    
-	    body#layout:before{content:"NihLink v2.6.5";position:absolute;top:33px;right:7px;z-index:1;padding:10px 20px;font-size:18px;font-family:sans-serif;color:#fff;background: #007bff}
-body#layout {background-color: #fff; border: 0}
-body#layout div.section {background-color: #fff}
-body#layout .add_widget a {color: #007bff}
-body#layout .row:after {content:'';clear:both;display:block}
-body#layout .isHideLayout {display:none;}
-body#layout .col-md-3 {float:left;width:30%;}
-body#layout .col-md-6 {float:left;width:40%;}
-body#layout #page-setting {background: #fffcf2}
-	    
-	    
 </style>
 
-<link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'/>
-<link href='https://use.fontawesome.com/releases/v5.0.10/css/all.css' rel='stylesheet' type='text/css'/>
-<script src='https://code.jquery.com/jquery-2.1.4.min.js' type='text/javascript'/>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js'/>
-<script src='https:https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js'/>
-<script type='text/javascript'>
-&quot;use strict&quot;;
-$(document).ready(function() {
-  (function(W,D){
-    W.asli_config = {
-      url: &#39;&#39;,
-      page: &#39;p/lanjut.html&#39;,
-      output: &#39;#output&#39;,
-      defaultkey: &#39;AnasRAR&#39;,
-      fixednavbar: false,
-      countdown: true,
-      timedown: 10,
-      lang: {
-        urlempty: &quot;URL can not empty&quot;,
-        convertsuccess: &quot;Convert URL success, copy url on box below&quot;,
-        validtext: &quot;HTTP, HTTPS, or WWW&quot;,
-        gourltext: &quot;coba di klik linknya pak&quot;,
-        nourl: &quot;nggapain pak ??, linknya nggak ada&quot;,
-        errorconvert: &quot;URL can not to convert&quot;,
-        emptypass: &quot;Password can not empty&quot;,
-        wrongpass: &quot;Password is incorrect&quot;,
-        countdowntext: &quot;Please Wait {{anascountdown}} Second&quot;
-      }
-    }
-    var xv = $(&#39;footer &gt; .d-table &gt; .d-table-row &gt; .d-table-cell &gt; .container &gt; .row &gt; .col-sm-7 &gt; a#naas&#39;);
-    if(xv.length){
-      W.validurlit = function (ur) {
-        return /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&amp;=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&amp;=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&amp;;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/.test(ur);
-      }
-      W.sUp = function(el) {
-        D.querySelector(el).parentNode.style.height = &#39;0&#39;;
-      }
-      W._GET = function(name, url) {
-        if (!url) url = location.href;
-        name = name.replace(/[\[]/,&quot;\\\[&quot;).replace(/[\]]/,&quot;\\\]&quot;);
-        var regexS = &quot;[\\?&amp;]&quot;+name+&quot;=([^&amp;#]*)&quot;;
-        var regex = new RegExp( regexS );
-        var results = regex.exec( url );
-        return results == null ? null : results[1];
-      }
-      xv.attr(&#39;href&#39;, &#39;//postkomik.github.io&#39;).text(&#39;postkomik&#39;);
-    } else {
-      location.href = &#39;//postkomik.github.io&#39;;
-    }
-  }(window,document));
-});
-</script>
-  
-  </head>
-  <body>
-      <section>
-                <form autocomplete='off' class='form-group' id='safelink'>
-                  <div class='input-group mb-0'>
-                    <div class='input-group-prepend'>
-                      <span class='input-group-text'><i class='fas fa-link fa-fw'/></span>
-                    </div>
-                    <input class='form-control' id='urlinput' onclick='sUp(&apos;#result&apos;)' onkeypress='sUp(&apos;#result&apos;)' placeholder='HTTP, HTTPS, or WWW' type='text'/>
-                    <div class='input-group-append'>
-                      <button class='btn btn-primary' type='submit'>Convert</button>
-                    </div>
-                  </div>
-                </form>
-              </section>
+&lt;!--</head>--&gt;&lt;/head&gt;
+&lt;body itemscope=&#39;itemscope&#39; itemtype=&#39;http://schema.org/WebPage&#39;&gt;
 
-     <section>
-                <div class='row mb-2'>
-                  <div class='col-3'>
-                    <button class='btn btn-dark btn-block' id='passbtn' onclick='sUp(&apos;#result&apos;)'>Password</button>
-                  </div>
-                  <div class='col-9'>
-                    <div class='input-group mb-0'>
-                      <div class='input-group-prepend'>
-                        <span class='input-group-text'><i class='fas fa-lock fa-fw'/></span>
-                      </div>
-                      <input class='form-control' disabled='disabled' id='passinput' onclick='sUp(&apos;#result&apos;)' onkeypress='sUp(&apos;#result&apos;)' type='text'/>
-                    </div>
-                  </div>
-                </div>
-              </section>
-    
-    <section class='mb-3'>
-                <div class='d-inline-block custom-control custom-switch mr-3'>
-                  <input class='custom-control-input' id='randPost' onclick='sUp(&apos;#result&apos;)' type='checkbox'/>
-                  <label class='custom-control-label' for='randPost' onclick='sUp(&apos;#result&apos;)'>Random Post</label>
-                </div>
-                <div class='d-inline-block custom-control custom-switch'>
-                  <input class='custom-control-input' id='countDown' onclick='sUp(&apos;#result&apos;)' type='checkbox'/>
-                  <label class='custom-control-label' for='countDown' onclick='sUp(&apos;#result&apos;)'>Countdown</label>
-                </div>
-              </section>
+<div id='fullpage'>
+  <div class='container-semifluid'>
+    <div class='holder'>
+      <nav class='navbar navbar-expand border-bottom bg-white py-2' data-type='fixednav'>
+        <div class='container'>
+          <a class='navbar-brand' expr:href='data:blog.homepageUrl'><data:blog.title/></a>
+          <button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+            <span class='navbar-toggler-icon'/>
+          </button>
 
-    <section class='trans' style='overflow: hidden;height: 0'>
-                <div id='result'/>
-              </section>
+          <div class='collapse navbar-collapse justify-content-end' id='navbarSupportedContent'>
+            <ul class='navbar-nav ml-auto'>
+              <li class='nav-item dropdown'>
+                <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle px-0' data-toggle='dropdown' href='#' id='navbarDropdown' role='button'>
+                  Menu
+                </a>
+                <ul aria-labelledby='navbarDropdown' class='dropdown-menu dropdown-menu-right' itemprop='mainEntity' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement'>
+                  <li class='dropdown-item'><a href='//github.com/postblogger' itemprop='url' title='Documentation'><span itemprop='name'>Documentation</span></a></li>
+                  <div class='dropdown-divider'/>
+                  <li class='dropdown-item'><a href='//postblogger.my.id' itemprop='url' title='My Blog'><span itemprop='name'>My Blog</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class='container py-3'>
+      <div id='isihalaman'>
 
-              <section class='layouthide'>
-                <div class='row text-center mb-3' style='margin-top:20%'>
-                  <div class='col-12 col-sm-4'>
-                    <div style='height: 60px; overflow: hidden'>
-                      <i class='fas fa-eye fa-fw fa-3x'/>
-                    </div>
-                    <h5>Encrypt</h5>
-                    <p>Make your url unreadable and no one can bypass</p>
-                  </div>
-                  <div class='col-12 col-sm-4'>
-                    <div style='height: 60px; overflow: hidden'>
-                      <i class='fas fa-lock fa-fw fa-3x'/>
-                    </div>
-                    <h5>Password</h5>
-                    <p>Set a password to protect your links from unauthorized access</p>
-                  </div>
-                  <div class='col-12 col-sm-4'>
-                    <div style='height: 60px; overflow: hidden'>
-                      <i class='fas fa-cogs fa-fw fa-3x'/>
-                    </div>
-                    <h5>Setting</h5>
-                      <p>Easy to setting without need to know programming language</p>
-                    </div>
-                  </div>
-              </section>
 
+        <b:section class='page-setting' cond='!data:view.isPreview' id='page-setting' maxwidgets='1'>
+          <b:widget id='HTML696' locked='false' title='setting' type='HTML' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'>url: &quot;&quot;,
+page: &quot;p/lanjut.html&quot;,
+output: &quot;#output&quot;,
+fixednavbar: true,
+countdown: true,
+timedown: 10,
+lang: {
+ urlempty: &quot;URL can not be empty&quot;,
+ convertsuccess: &quot;Convert URL success, copy url on box below&quot;,
+ validtext: &quot;HTTP, HTTPS, or WWW&quot;,
+ gourltext: &quot;Click here to go&quot;,
+ nourl: &quot;No URl here&quot;,
+ errorconvert: &quot;URL can not to convert&quot;,
+ emptypass: &quot;Password can not be empty&quot;,
+ wrongpass: &quot;Password is incorrect&quot;,
+ countdowntext: &quot;Please Wait {{anascountdown}} Second&quot;
+}</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
 <script type='text/javascript'>
   &quot;use strict&quot;;
   $(document).ready(function() {
@@ -228,8 +235,40 @@ $(document).ready(function() {
     window.config = $.extend(true, asli_config, new_config);
   });
 </script>
-    
-    <script type='text/javascript'>
+            </b:includable>
+          </b:widget>
+        </b:section>
+
+
+        <div class='row'>
+
+          <div class='col-12 col-md-3 mb-3'>
+            <b:section class='ads-left sticky-top' cond='!data:view.isPreview' id='ads-left' maxwidgets='1'>
+              <b:widget id='HTML602' locked='false' title='left-sidebar-ads' type='HTML' version='2' visible='true'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'><![CDATA[<img src="//dummyimage.com/700x700/ccc/777.png&text=+++ADS+++" alt="text=ads" title="ads" class="d-block w-100 mb-3" /><img src="//dummyimage.com/700x700/ccc/777.png&text=+++ADS+++" alt="text=ads" title="ads" class="d-block w-100 mb-3" />]]></b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+      						<b:if cond='data:view.isSingleItem'>
+      							<data:content/>
+      						</b:if>
+      					</b:includable>
+              </b:widget>
+            </b:section>
+          </div>
+
+
+          <div class='col-12 col-md-6 pb-3'>
+
+
+            <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+              <div class='text-center' style='font-size: 7vw'>Oppss...</div>
+              <div class='text-center' style='font-size: 3vw'>Page not found</div>
+            </b:if>
+
+
+            <b:if cond='data:view.isSingleItem'>
+              <script type='text/javascript'>
                 &quot;use strict&quot;;
 
 if (!String.prototype.startsWith) {
@@ -328,8 +367,82 @@ if (!String.prototype.startsWith) {
                   }
                 });
               </script>
-    
-     <script type='text/javascript'>
+            </b:if>
+
+            <b:if cond='data:view.isMultipleItems'>
+
+              <section>
+                <form autocomplete='off' class='form-group' id='safelink'>
+                  <div class='input-group mb-0'>
+                    <div class='input-group-prepend'>
+                      <span class='input-group-text'><i class='fas fa-link fa-fw'/></span>
+                    </div>
+                    <input class='form-control' id='urlinput' onclick='sUp(&apos;#result&apos;)' onkeypress='sUp(&apos;#result&apos;)' placeholder='HTTP, HTTPS, or WWW' type='text'/>
+                    <div class='input-group-append'>
+                      <button class='btn btn-primary' type='submit'>Convert</button>
+                    </div>
+                  </div>
+                </form>
+              </section>
+
+              <section>
+                <div class='row mb-2'>
+                  <div class='col-3'>
+                    <button class='btn btn-dark btn-block' id='passbtn' onclick='sUp(&apos;#result&apos;)'>Password</button>
+                  </div>
+                  <div class='col-9'>
+                    <div class='input-group mb-0'>
+                      <div class='input-group-prepend'>
+                        <span class='input-group-text'><i class='fas fa-lock fa-fw'/></span>
+                      </div>
+                      <input class='form-control' disabled='disabled' id='passinput' onclick='sUp(&apos;#result&apos;)' onkeypress='sUp(&apos;#result&apos;)' type='text'/>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class='mb-3'>
+                <div class='d-inline-block custom-control custom-switch mr-3'>
+                  <input class='custom-control-input' id='randPost' onclick='sUp(&apos;#result&apos;)' type='checkbox'/>
+                  <label class='custom-control-label' for='randPost' onclick='sUp(&apos;#result&apos;)'>Random Post</label>
+                </div>
+                <div class='d-inline-block custom-control custom-switch'>
+                  <input class='custom-control-input' id='countDown' onclick='sUp(&apos;#result&apos;)' type='checkbox'/>
+                  <label class='custom-control-label' for='countDown' onclick='sUp(&apos;#result&apos;)'>Countdown</label>
+                </div>
+              </section>
+
+              <section class='trans' style='overflow: hidden;height: 0'>
+                <div id='result'/>
+              </section>
+
+              <section class='layouthide'>
+                <div class='row text-center mb-3' style='margin-top:20%'>
+                  <div class='col-12 col-sm-4'>
+                    <div style='height: 60px; overflow: hidden'>
+                      <i class='fas fa-eye fa-fw fa-3x'/>
+                    </div>
+                    <h5>Encrypt</h5>
+                    <p>Make your url unreadable and no one can bypass</p>
+                  </div>
+                  <div class='col-12 col-sm-4'>
+                    <div style='height: 60px; overflow: hidden'>
+                      <i class='fas fa-lock fa-fw fa-3x'/>
+                    </div>
+                    <h5>Password</h5>
+                    <p>Set a password to protect your links from unauthorized access</p>
+                  </div>
+                  <div class='col-12 col-sm-4'>
+                    <div style='height: 60px; overflow: hidden'>
+                      <i class='fas fa-cogs fa-fw fa-3x'/>
+                    </div>
+                    <h5>Setting</h5>
+                      <p>Easy to setting without need to know programming language</p>
+                    </div>
+                  </div>
+              </section>
+
+              <script type='text/javascript'>
               &quot;use strict&quot;;
                 $(document).ready(function() {
 
@@ -406,7 +519,189 @@ if (!String.prototype.startsWith) {
 
                 });
               </script>
-    <script type='text/javascript'>
+            </b:if>
+
+            <b:section id='page-is' maxwidgets='1' showaddelement='no'>
+              <b:widget cond='data:view.isSingleItem' id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+                <b:widget-settings>
+                  <b:widget-setting name='commentLabel'>Comment</b:widget-setting>
+                  <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                  <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
+                  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                  <b:widget-setting name='timestampLabel'>-</b:widget-setting>
+                  <b:widget-setting name='reactionsLabel'>Reaction</b:widget-setting>
+                  <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+                  <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                  <b:widget-setting name='showLocation'>false</b:widget-setting>
+                  <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+                  <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+                  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+                  <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+                  <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+                  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+                  <b:widget-setting name='postLocationLabel'>Location</b:widget-setting>
+                  <b:widget-setting name='showAuthor'>true</b:widget-setting>
+                  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+                  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                  <b:widget-setting name='showLabels'>true</b:widget-setting>
+                  <b:widget-setting name='postLabelsLabel'>Labels</b:widget-setting>
+                  <b:widget-setting name='showBacklinks'>true</b:widget-setting>
+                  <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                  <b:widget-setting name='showReactions'>true</b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main' var='this'>
+                  <b:comment>var=&#39;this&#39; digunakan untuk mengirim setiap data allBylineItems agar bisa terbaca</b:comment>
+
+             	    <b:loop values='data:posts' var='post'>
+            		    <b:include name='article.loop'/>
+            	    </b:loop>
+
+                </b:includable>
+                <b:includable id='aboutPostAuthor'/>
+                <b:includable id='addComments'/>
+                <b:includable id='article.loop'>
+                  <b:if cond='data:view.isMultipleItems'>
+
+                    <article expr:class='&quot;content index post-&quot; + data:post.id + &quot; blog&quot;' id='content-card' itemscope='itemscope' itemtype='https://schema.org/BlogPosting'>
+            	         <b:include name='article.loop.index'/>
+                     </article>
+
+                  <b:else/>
+
+                    <main aria-label='Main content' class='content post' itemscope='itemscope' itemtype='https://schema.org/Blog'>
+            	         <article expr:class='&quot;post-&quot; + data:post.id + &quot; blog&quot;' itemprop='blogPost' itemscope='itemscope' itemtype='https://schema.org/BlogPosting'>
+            		           <b:include name='article.loop.post'/>
+            	         </article>
+                    </main>
+                  </b:if>
+                </b:includable>
+                <b:includable id='article.loop.index'>
+
+            <div class='thumbnail'>
+            <img class='trans'>
+            <b:attr expr:value='data:post.title ? data:post.title : data:messages.image' name='alt'/>
+            <b:attr expr:value='data:post.title ? data:post.title : data:messages.image' name='title'/>
+            <b:if cond='data:post.featuredImage'>
+            <b:attr expr:value='resizeImage(data:post.featuredImage, 240)' name='src'/>
+            <b:else/>
+            <b:attr name='src' value='https://placehold.it/750x440/4a138c/fff?text=NO+THUMBNAIL'/>
+            </b:if>
+            </img>
+            </div>
+            <a class='btn' expr:href='data:post.link ? data:post.link : data:post.url' expr:title='data:post.title ? data:post.title : data:messages.noTitle'/>
+            <h3>
+            	<a expr:href='data:post.link ? data:post.link : data:post.url' expr:title='data:post.title ? data:post.title : data:messages.noTitle'>
+            		<b:eval expr='data:post.title ? data:post.title snippet { length: 5, links: false, linebreaks: false, ellipsis: true } : data:messages.noTitle'/>
+            	</a>
+            </h3>
+            <div class='deskripsi'><b:eval expr='data:post.snippets.long snippet { length: 100, links: false, linebreaks: false, ellipsis: true }'/></div>
+
+            </b:includable>
+                <b:includable id='article.loop.post'>
+
+            <div class='post-body' itemprop='articleBody'>
+              <h3 class='text-center'><data:post.title/></h3>
+            	<data:post.body/>
+            </div>
+
+            </b:includable>
+                <b:includable id='article.pagination'>
+            <b:if cond='not data:view.isSingleItem'>
+            <b:if cond='data:olderPageUrl'>
+            <div class='col-sm-12 col-xs-12'>
+            <div id='linkloadmore'>
+            	<a expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_pagination-old&quot;' expr:title='data:messages.olderPosts' itemprop='url'>
+            		<span itemprop='name'>Next Page</span>
+            	</a>
+            </div>
+            </div>
+            </b:if>
+            </b:if>
+            </b:includable>
+                <b:includable id='commentAuthorAvatar'/>
+                <b:includable id='commentDeleteIcon'/>
+                <b:includable id='commentForm'/>
+                <b:includable id='commentFormIframeSrc'/>
+                <b:includable id='commentItem'/>
+                <b:includable id='commentList'/>
+                <b:includable id='commentPicker'/>
+                <b:includable id='comments'/>
+                <b:includable id='commentsTitle'/>
+                <b:includable id='feedLinks'/>
+                <b:includable id='feedLinksBody'/>
+                <b:includable id='homePageLink'/>
+                <b:includable id='iframeComments'/>
+                <b:includable id='inlineAd'/>
+                <b:includable id='nextPageLink'/>
+                <b:includable id='post'/>
+                <b:includable id='postBody'/>
+                <b:includable id='postBodySnippet'/>
+                <b:includable id='postCommentsAndAd'/>
+                <b:includable id='postCommentsLink'/>
+                <b:includable id='postFooter'/>
+                <b:includable id='postFooterAuthorProfile'/>
+                <b:includable id='postHeader'/>
+                <b:includable id='postJumpLink'/>
+                <b:includable id='postMeta'/>
+                <b:includable id='postPagination'/>
+                <b:includable id='postTitle'/>
+                <b:includable id='previousPageLink'/>
+                <b:includable id='status-message'/>
+                <b:includable id='threadedCommentForm'/>
+                <b:includable id='threadedCommentJs'/>
+                <b:includable id='threadedComments'/>
+              </b:widget>
+            </b:section>
+
+            <b:section cond='false' id='reset'/>
+
+          </div>
+
+
+          <div class='col-12 col-md-3 order-last mb-3'>
+            <b:section class='ads-right sticky-top' cond='!data:view.isPreview' id='ads-right' maxwidgets='1'>
+              <b:widget id='HTML704' locked='false' title='right-sidebar-ads' type='HTML' version='2' visible='true'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'><![CDATA[<img src="//dummyimage.com/700x700/ccc/777.png&text=+++ADS+++" alt="text=ads" title="ads" class="d-block w-100 mb-3" /><img src="//dummyimage.com/700x700/ccc/777.png&text=+++ADS+++" alt="text=ads" title="ads" class="d-block w-100 mb-3" />]]></b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+          				<b:if cond='data:view.isSingleItem'>
+          					<data:content/>
+          				</b:if>
+          			</b:includable>
+              </b:widget>
+            </b:section>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class='footer'>
+  <div class='d-table w-100' style='height:100%'>
+    <div class='d-table-row'>
+      <div class='d-table-cell align-middle'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-sm-5'>
+              &#169; 2019 <a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><span expr:title='data:blog.title'><data:blog.title/></span></a> All Right Reserved
+            </div>
+            <div class='col-sm-7 text-right'>
+              Created By <a href='//postkomik.github.io' id='naas' title='postkomik'>postkomik</a>
+              <!-- Please Dont Remove Or Change My Link  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type='text/javascript'>
   $(document).ready(function() {
     if (config.fixednavbar) {
       var navbar = $(&#39;.navbar&#39;), placeholder = navbar.parent();
@@ -417,5 +712,6 @@ if (!String.prototype.startsWith) {
     }
   });
 </script>
-</body>
+
+<b:defaultmarkups><b:defaultmarkup type='Common'><b:includable id='body'><b:if cond='data:view.isPreview'><body/><b:else/>&lt;!--<body/>--&gt;</b:if></b:includable></b:defaultmarkup></b:defaultmarkups>&lt;/body&gt;
 </html>
